@@ -1,0 +1,190 @@
+/* -------------------------------------- */
+/* ESTILOS ESPECÍFICOS PARA HOME PAGE */
+/* -------------------------------------- */
+.home-page {
+    padding: 0; /* Aseguramos que el padding se maneje en las secciones */
+    color: #333;
+    min-height: 80vh; /* Para dar espacio */
+}
+
+/* -------------------------------------- */
+/* SECCIÓN HERO (Banner principal) */
+/* -------------------------------------- */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fcfcfc; /* Fondo muy claro para destacar */
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+    border-bottom: 3px solid #f7a43e; /* Línea de acento naranja */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.shop-button {
+    background-color: #f7a43e;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shop-button:hover {
+    background-color: #e5942d;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.main-hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Diseño para Desktop */
+@media (min-width: 768px) {
+    .hero-section {
+        flex-direction: row;
+        text-align: left;
+        padding: 4rem 5%;
+    }
+    .hero-content {
+        flex: 1;
+        padding-right: 3rem;
+    }
+    .hero-image {
+        flex: 1;
+    }
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+}
+
+/* -------------------------------------- */
+/* SECCIÓN DE PRODUCTOS DESTACADOS (CARRUSEL) */
+/* -------------------------------------- */
+.featured-section {
+    padding: 3rem 1rem;
+    background-color: #ffffff;
+}
+
+.featured-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #f7a43e;
+}
+
+.featured-products-container {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: scroll; /* Permite el desplazamiento horizontal */
+    padding-bottom: 1.5rem; /* Espacio para la barra de desplazamiento */
+    /* Estilos para ocultar la barra de desplazamiento en navegadores WebKit (Chrome, Safari) */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.featured-products-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.featured-products-container .product-card {
+    /* Aseguramos que la tarjeta no se comprima */
+    flex-shrink: 0;
+    width: 280px; /* Ancho fijo para las tarjetas en el carrusel */
+}
+
+.view-all-button {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0;
+    color: #f7a43e;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px solid #f7a43e;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.view-all-button:hover {
+    background-color: #f7a43e;
+    color: white;
+}
+
+/* -------------------------------------- */
+/* SECCIÓN ACERCA DE (Preview) */
+/* -------------------------------------- */
+.about-preview {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.about-preview h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.learn-more-button {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+    transition: color 0.3s ease;
+}
+
+.learn-more-button:hover {
+    color: #f7a43e;
+    border-bottom-color: #f7a43e;
+}
+
+/* -------------------------------------- */
+/* SOPORTE PARA MODO OSCURO */
+/* -------------------------------------- */
+body.dark-mode .hero-section {
+    background-color: #1e1e1e;
+    border-bottom-color: #f7a43e;
+}
+body.dark-mode .hero-content h1 {
+    color: #ffffff;
+}
+body.dark-mode .hero-content p {
+    color: #b0b0b0;
+}
+body.dark-mode .featured-section {
+    background-color: #121212;
+}
+body.dark-mode .featured-section h2 {
+    color: #f7a43e;
+}
+body.dark-mode .about-preview {
+    background-color: #1e1e1e;
+}
+body.dark-mode .about-preview h2,
+body.dark-mode .about-preview p {
+    color: #ffffff;
+}
+body.dark-mode .learn-more-button {
+    color: #f7a43e;
+    border-bottom-color: #f7a43e;
+}

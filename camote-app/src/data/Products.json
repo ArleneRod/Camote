@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Camote Frito",
+      "price": 5.99,
+      "image": "https://placehold.co/600x400/FF5733/FFFFFF?text=Camote+Frito",
+      "country": "Perú",
+      "isFeatured": true
+    },
+    {
+      "id": "2",
+      "name": "Taco al Pastor",
+      "price": 2.50,
+      "image": "https://placehold.co/600x400/FF5733/FFFFFF?text=Taco+Al+Pastor",
+      "country": "México"
+    },
+    {
+      "id": "3",
+      "name": "Arepa Rellena",
+      "price": 3.75,
+      "image": "https://placehold.co/600x400/FF5733/FFFFFF?text=Arepa+Rellena",
+      "country": "Colombia"
+    },
+    {
+      "id": "4",
+      "name": "Causa Rellena",
+      "price": 8.50,
+      "image": "https://placehold.co/600x400/FF5733/FFFFFF?text=Causa+Rellena",
+      "country": "Perú",
+      "isFeatured": true
+    },
+    {
+      "id": "5",
+      "name": "Enchiladas Verdes",
+      "price": 7.25,
+      "image": "https://placehold.co/600x400/FF5733/FFFFFF?text=Enchiladas+Verdes",
+      "country": "México"
+    },
+    {
+      "id": "6",
+      "name": "Bandeja Paisa",
+      "price": 12.00,
+      "image": "https://placehold.co/600x400/FF5733/FFFFFF?text=Bandeja+Paisa",
+      "country": "Colombia",
+      "isFeatured": true
+    },
+    {
+      "id": "7",
+      "name": "Anticuchos",
+      "price": 6.00,
+      "image": "https://placehold.co/600x400/FF5733/FFFFFF?text=Anticuchos",
+      "country": "Perú"
+    },
+    {
+      "id": "8",
+      "name": "Guacamole",
+      "price": 4.50,
+      "image": "https://placehold.co/600x400/FF5733/FFFFFF?text=Guacamole",
+      "country": "México"
+    },
+    {
+      "id": "9",
+      "name": "Empanadas",
+      "price": 2.25,
+      "image": "https://placehold.co/600x400/FF5733/FFFFFF?text=Empanadas",
+      "country": "Colombia"
+    }
+  ]
+}

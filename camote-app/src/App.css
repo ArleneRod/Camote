@@ -1,0 +1,91 @@
+/* Estilos Globales y de Modo Claro */
+.App {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    padding: 2rem 0;
+}
+
+/* -------------------------------------- */
+/* ESTILOS DEL MODO OSCURO */
+/* -------------------------------------- */
+
+/* Estilos aplicados al body cuando la clase .dark-mode está presente */
+body.dark-mode {
+    background-color: #121212; /* Fondo oscuro principal */
+    color: #e0e0e0; /* Color de texto claro */
+}
+
+/* Estilos para contenedores principales (como el fondo de las páginas) */
+body.dark-mode .App {
+    background-color: #121212;
+}
+
+/* Fondo de las tarjetas y contenedores de contenido */
+body.dark-mode .product-card,
+body.dark-mode .about-page,
+body.dark-mode .contact-form,
+body.dark-mode .cart-page,
+body.dark-mode .featured-products-container {
+    background-color: #1e1e1e; /* Fondo ligeramente más claro que el body */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra más oscura */
+}
+
+/* Color de texto en títulos y subtítulos */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode label {
+    color: #ffffff;
+}
+
+/* Color de texto secundario y párrafos */
+body.dark-mode p {
+    color: #b0b0b0;
+}
+
+/* Header/Footer y navegación */
+body.dark-mode .header-container,
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .header-container nav a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .header-container nav a:hover {
+    color: #f7a43e; /* El color de acento sigue siendo naranja */
+}
+
+/* Inputs y textareas */
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #333333;
+    border-color: #555555;
+    color: #e0e0e0;
+}
+
+/* Botones de filtros (para que no brillen demasiado) */
+body.dark-mode .filters-container button:not(.active),
+body.dark-mode .sort-buttons button:not(.active) {
+    background-color: #333333;
+    border-color: #555555;
+    color: #e0e0e0;
+}
+
+/* Botones activos (mantienen el color de acento) */
+body.dark-mode .filters-container button.active,
+body.dark-mode .sort-buttons button.active {
+    background-color: #f7a43e;
+    border-color: #f7a43e;
+    color: white;
+}
+
+

@@ -1,0 +1,292 @@
+/* ===================================
+   HEADER PRINCIPAL
+   =================================== */
+.header-container {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+
+    /* Sombra suave pero visible */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+    /* Sticky header para que permanezca visible al hacer scroll */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    /* Borde inferior de acento */
+    border-bottom: 3px solid #f7a43e;
+
+    /* Transición suave para dark mode */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ===================================
+   LOGO
+   =================================== */
+.header-container .logo {
+    display: flex;
+    align-items: center;
+    /* Evita que el logo se encoja en móviles */
+    flex-shrink: 0;
+}
+
+.header-container .logo img {
+    height: 50px;
+    /* Transición suave si cambias el tamaño del logo */
+    transition: transform 0.3s ease;
+}
+
+.header-container .logo img:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================
+   NAVEGACIÓN
+   =================================== */
+.header-container nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-container nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.header-container nav li {
+    position: relative;
+}
+
+.header-container nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    position: relative;
+
+    /* Transiciones suaves */
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+    /* Mejor área de clic */
+    display: inline-block;
+}
+
+/* Efecto hover más suave */
+.header-container nav a:hover {
+    color: #f7a43e;
+    background-color: rgba(247, 164, 62, 0.1);
+}
+
+/* Subrayado animado al hacer hover */
+.header-container nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0.75rem;
+    right: 0.75rem;
+    height: 2px;
+    background-color: #f7a43e;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.header-container nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Indicador de página activa (opcional - agregar clase .active en tu JSX) */
+.header-container nav a.active {
+    color: #f7a43e;
+    background-color: rgba(247, 164, 62, 0.1);
+}
+
+.header-container nav a.active::after {
+    transform: scaleX(1);
+}
+
+/* ===================================
+   CARRITO
+   =================================== */
+.cart-icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.cart-icon-container:hover {
+    background-color: rgba(247, 164, 62, 0.1);
+}
+
+.cart-badge {
+    background-color: #f7a43e;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 50%;
+    padding: 0.15rem 0.4rem;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    min-width: 18px;
+    min-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Sombra para destacar el badge */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    /* Animación de entrada */
+    animation: badgePop 0.3s ease;
+}
+
+@keyframes badgePop {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ===================================
+   MODO OSCURO
+   =================================== */
+body.dark-mode .header-container {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    border-bottom-color: #f7a43e;
+}
+
+body.dark-mode .header-container nav a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .header-container nav a:hover {
+    color: #f7a43e;
+    background-color: rgba(247, 164, 62, 0.15);
+}
+
+body.dark-mode .cart-icon-container:hover {
+    background-color: rgba(247, 164, 62, 0.15);
+}
+
+/* ===================================
+   RESPONSIVE - TABLET
+   =================================== */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 1rem 1.5rem;
+    }
+
+    .header-container nav ul {
+        gap: 1.5rem;
+    }
+
+    .header-container nav a {
+        font-size: 0.95rem;
+        padding: 0.4rem 0.6rem;
+    }
+}
+
+/* ===================================
+   RESPONSIVE - MÓVIL
+   =================================== */
+@media (max-width: 600px) {
+    .header-container {
+        justify-content: center;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .header-container .logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .header-container nav {
+        width: 100%;
+    }
+
+    .header-container nav ul {
+        width: 100%;
+        justify-content: space-around;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .header-container nav a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.5rem;
+    }
+
+    .cart-icon-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #f7a43e;
+        color: white;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(247, 164, 62, 0.5);
+        z-index: 1001;
+        justify-content: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cart-icon-container:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 16px rgba(247, 164, 62, 0.6);
+        background-color: #f7a43e;
+    }
+
+    .cart-badge {
+        top: 0;
+        right: 0;
+    }
+}
+
+/* ===================================
+   ACCESIBILIDAD
+   =================================== */
+/* Mejor enfoque para navegación por teclado */
+.header-container nav a:focus {
+    outline: 2px solid #f7a43e;
+    outline-offset: 2px;
+}
+
+/* Reducir animaciones para usuarios con preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    .header-container,
+    .header-container nav a,
+    .header-container nav a::after,
+    .header-container .logo img,
+    .cart-icon-container {
+        transition: none;
+    }
+
+    .cart-badge {
+        animation: none;
+    }
+}
+
+
