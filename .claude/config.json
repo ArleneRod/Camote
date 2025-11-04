@@ -1,0 +1,6 @@
+{
+  "allowedCommands": ["git"],
+  "autoApprove": {
+    "git": true
+  }
+}
