@@ -1,0 +1,59 @@
+.toast-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    min-width: 250px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    opacity: 0; /* Inicialmente invisible */
+    visibility: hidden;
+    transform: translateY(100px); /* Sale de abajo */
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.toast-message.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Se desliza hacia la posición final */
+}
+
+/* Estilos por tipo de mensaje */
+.toast-message.success {
+    background-color: #4CAF50; /* Verde para éxito */
+}
+
+.toast-message.error {
+    background-color: #f44336; /* Rojo para error */
+}
+
+.toast-message.info {
+    background-color: #2196F3; /* Azul para información */
+}
+
+.toast-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.toast-text {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Media query para pantallas más pequeñas (móviles) */
+@media (max-width: 600px) {
+    .toast-message {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        min-width: auto;
+        width: auto;
+    }
+}

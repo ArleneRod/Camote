@@ -24,7 +24,7 @@ const Header = () => {
                             {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
                         </Link>
                     </li>
-                    <li><Link to="/acerca-de">Acerca de Nosotros</Link></li>
+                    <li><Link to="/nosotros">Acerca de Nosotros</Link></li>
                     <li><Link to="/contacto">Contacto</Link></li>
                 </ul>
             </nav>

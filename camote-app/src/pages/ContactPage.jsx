@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './ContactPage.css';
+import { useToast } from '../context/ToastContext';
 
 const ContactPage = () => {
+    const { showToast } = useToast();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -21,7 +23,10 @@ const ContactPage = () => {
         // Aquí es donde enviarías los datos del formulario a un servicio de backend,
         // pero por ahora, solo los mostraremos en la consola para depuración.
         console.log('Datos del formulario de contacto:', formData);
-        alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');
+
+        // NOTA: Reemplazamos 'alert()' por la notificación Toast para una mejor UX.
+        showToast('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.', 'success');
+
         setFormData({ name: '', email: '', message: '' }); // Limpia el formulario
     };
 
